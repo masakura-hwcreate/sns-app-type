@@ -51,7 +51,6 @@ function Signup() {
                     </label>
                     <div className="mt-1">
                     <input
-                        onChange={(e)=>setEmail(e.target.value)}
                         id="email"
                         name="email"
                         placeholder="メールアドレス"
