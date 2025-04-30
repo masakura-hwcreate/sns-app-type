@@ -22,6 +22,5 @@ export const authRepository = {
             email: data.user.email ?? "",
             userName: data.user.user_metadata.name
         }
-        // return { ...data.user, userName: data.user.user_metadata.name };
     }
 }
