@@ -22,5 +22,19 @@ export const authRepository = {
             email: data.user.email ?? "",
             userName: data.user.user_metadata.name
         }
+    },
+
+    async signin(email: string, password: string): Promise<SignupResult> {
+        const { data, error } = await supabase.auth.signInWithPassword({
+            email,
+            password,
+        });
+        if(error !== null) throw new Error(error.message);
+
+        return {
+            id: data.user.id,
+            email: data.user.email ?? "",
+            userName: data.user.user_metadata.name
+        }
     }
 }

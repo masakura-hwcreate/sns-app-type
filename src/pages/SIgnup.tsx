@@ -14,7 +14,6 @@ function Signup() {
 
     const signup = async () => {
         const user: User = await authRepository.signup(name, email, password);
-        console.log(user);
     }
 
     return (
